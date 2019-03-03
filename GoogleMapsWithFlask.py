@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_googlemaps import GoogleMaps
 from flask_googlemaps import Map
 
-app = Flask(__name__, template_folder=".")
+app = Flask(__name__)
 
 # you can set key as config
 app.config['GOOGLEMAPS_KEY'] = "AIzaSyCjmcW8uZhOU0DoZ7kWKjx11WrlJsDsAR4"
@@ -38,7 +38,7 @@ def mapview():
           }
         ]
     )
-    return render_template('', mymap=mymap, sndmap=sndmap)
+    return render_template('Template.html', mymap=mymap, sndmap=sndmap)
 
 if __name__ == "__main__":
     app.run(debug=True)
