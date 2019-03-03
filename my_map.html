@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(34.105240, -117.294120);
+		var myOptions = {
+			zoom: 12,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		var latlng = new google.maps.LatLng(34.110000, -117.190000);
+		var img = new google.maps.MarkerImage('C:\Users\006116561\PycharmProjects\HACKATHON\venv\lib\site-packages\gmplot\markers/6495ED.png');
+		var marker = new google.maps.Marker({
+		title: "no implementation",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+
+		var latlng = new google.maps.LatLng(34.178811, -117.326755);
+		var img = new google.maps.MarkerImage('C:\Users\006116561\PycharmProjects\HACKATHON\venv\lib\site-packages\gmplot\markers/6495ED.png');
+		var marker = new google.maps.Marker({
+		title: "no implementation",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+var coords = [
+new google.maps.LatLng(34.178811, -117.326755),
+new google.maps.LatLng(34.178162, -117.318885),
+new google.maps.LatLng(34.179274, -117.313970),
+new google.maps.LatLng(34.184890, -117.320197),
+new google.maps.LatLng(34.183400, -117.320500),
+new google.maps.LatLng(34.178811, -117.326755),
+new google.maps.LatLng(32.490934, -96.953205),
+];
+
+var polygon = new google.maps.Polygon({
+<!-- THIS WAS CHANGED FROM FALSE TO TRUE -->
+clickable: true,
+<!-- -->
+geodesic: true,
+fillColor: "#6495ED",
+fillOpacity: 0.300000,
+paths: coords,
+strokeColor: "#6495ED",
+strokeOpacity: 1.000000,
+strokeWeight: 1
+});
+
+<!-- -->
+polygon.setMap(map);
+
+polygon.addListener('click', function() {
+	map.setZoom(15);
+	});
+<!-- -->
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map_canvas" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
