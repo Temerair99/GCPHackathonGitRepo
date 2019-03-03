@@ -1,11 +1,13 @@
 from Person import Person
 
 class Post:
+    active = True
 
-    def __init__ (self, name, rating, id, location, is_avlb):
-        self.name       = Person.get_name
-        self.rating     = Person.get_rating
-        self.__id       = 0
+    def __init__ (self, name, item_desc, rating, pid, location, is_avlb):
+        self.name       = name
+        self.item_desc  = item_desc
+        self.rating     = rating
+        self.__pid      = 0
         self.__location = 0
 
     def obj_desc(self):
@@ -13,14 +15,10 @@ class Post:
         return item_desc
 
     def get_user(self):
-        return "Name: " + str(self.name) + "\nRating: " + str(self.rating)
+        print("Name: " + str(self.name) + "\nRating: " + str(self.rating))
 
-    def get_dest():
-        temp2 = 0
+#    def get_dest(self):
+#        return
 
     def is_avlb(self):
         if ():
-
-x = Post(Person.get_name, Person.get_rating, 0, 0, True)
-
-x.get_user()
