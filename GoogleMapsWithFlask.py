@@ -27,6 +27,9 @@ app.config['GOOGLEMAPS_KEY'] = "AIzaSyCjmcW8uZhOU0DoZ7kWKjx11WrlJsDsAR4"
 user_address = 'CSU San Bernardino'
 user_lat, user_lng = fetch_geocode(user_address)
 
+# Fetch map center lat and lng with geocode function
+map_center_lat, map_center_lng = fetch_geocode('San Bernardino')
+
 # Initialize the extension
 
 GoogleMaps(app)
@@ -43,11 +46,11 @@ def mapview():
 
         identifier="view-side",
 
-        lat=37.4419,
+        lat= map_center_lat,
 
-        lng=-122.1419,
+        lng= map_center_lng,
 
-        markers=[(37.4419, -122.1419)]
+        markers=[lat, lng]
 
     )
 
@@ -55,9 +58,9 @@ def mapview():
 
         identifier="sndmap",
 
-        lat=37.4419,
+        lat= map_center_lat,
 
-        lng=-122.1419,
+        lng= map_center_lng,
 
         markers=[
 
