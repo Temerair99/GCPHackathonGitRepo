@@ -50,7 +50,7 @@ def mapview():
 
         lng= map_center_lng,
 
-        markers=[lat, lng]
+        markers=[(lat, lng)]
 
     )
 
