@@ -16,9 +16,13 @@ class Post:
 
     def get_user(self):
         print("Name: " + str(self.name) + "\nRating: " + str(self.rating))
+        return self.name, self.rating
 
-#    def get_dest(self):
-#        return
+    def get_dest(self):
+        return
 
     def is_avlb(self):
-        if ():
+        if (active == True):
+            return True
+        else:
+            return False
