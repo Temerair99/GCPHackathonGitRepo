@@ -6,7 +6,7 @@ import geocoder as geoc
 
 api_key = 'AIzaSyAzYDaMOhBcqZkmHOz-gwmmIS0Vsd6FN8o'
 
-user_address = input()
+#user_address = input()
 
 def fetch_geocode(address):
     geolocation = geoc.google(address, key=api_key)
@@ -20,6 +20,6 @@ def fetch_geocode(address):
 #g = geoc.google('730 Dover Drive', key=api_key)
 #print(g.latlng)
 
-user_lat, user_lng = fetch_geocode(user_address)
-print( user_lat, user_lng)
+#user_lat, user_lng = fetch_geocode(user_address)
+#print( user_lat, user_lng)
 
