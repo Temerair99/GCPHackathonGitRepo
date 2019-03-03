@@ -46,11 +46,11 @@ def mapview():
 
         identifier="view-side",
 
-        lat= map_center_lat,
+        lat=34.10524,
 
-        lng= map_center_lng,
+        lng=-117.29412,
 
-        markers=[(lat, lng)]
+        markers=[(34.10524, -117.29412)]
 
     )
 
@@ -58,9 +58,9 @@ def mapview():
 
         identifier="sndmap",
 
-        lat= map_center_lat,
+        lat=34.10524,
 
-        lng= map_center_lng,
+        lng=-117.29412,
 
         markers=[
 
