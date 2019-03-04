@@ -4,8 +4,6 @@ import geocoder as geoc
 ##    api_key = f.readline()
 ##    f.close()
 
-api_key = 'AIzaSyAzYDaMOhBcqZkmHOz-gwmmIS0Vsd6FN8o'
-
 #user_address = input()
 
 def fetch_geocode(address):
